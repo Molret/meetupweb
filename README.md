@@ -4,4 +4,5 @@ Tiene como proposito incentivar a los jovenes miembros de la iglesia y no miembr
 Además de brindar soporte, fechas, horarios, etc.
 ## Fecha inicial de trabajo: 03-08-2024
 Se va a ir actualizando cada vez que venga un evento meetup en Latinoamérica.
-<img> src="https://i.ibb.co/R9mV7Vk/262-1x-shots-so.png" </img>
+Actualmente solo hay informacion de las sesiones en Chile.
+Luego iré expandiendo los paises, sesiones, etc.

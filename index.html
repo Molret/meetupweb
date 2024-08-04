@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeetUp 2024</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="logo.png" alt="Logo MeetUp" class="logo">
+            <div class="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#acerca">Acerca</a>
+                <a href="#sesiones">Sesiones</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contacto">Contacto</a>
+                <button class="inscripcion-btn" onclick="redirectAndNotify()">Inscripción</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <h1>MeetUp 2024</h1>
+            <p>Un evento anual para jóvenes de 12 a 18 años</p>
+            <button class="cta-button" onclick="redirectAndNotify()">¡Inscríbete ahora!</button>
+        </section>
+
+        <section id="acerca" class="card">
+            <h2>Acerca del evento</h2>
+            <p>MeetUp es un evento anual donde los jóvenes se reúnen para aprender, jugar y crecer en el evangelio.</p>
+        </section>
+
+        <section id="sesiones" class="card">
+            <h2>Informacion Sesiones</h2>
+            <select id="session-select" class="session-selector">
+                <option value="">Selecciona una sesión</option>
+                <option value="villa-alemana">Sesión MeetUp Chile Villa Alemana</option>
+                <option value="vina-del-mar">Sesión MeetUp Chile Viña Del Mar</option>
+                <option value="la-serena">Sesión MeetUp Chile La Serena</option>
+                <option value="arauco">Sesión MeetUp Chile Arauco</option>
+                <option value="talca">Sesión MeetUP Talca</option>
+                <option value="puente-alto-2">Sesión MeetUP Chile Puente Alto 2 (12 a 14 años)</option>
+                <option value="arica-los-olivos">Sesión MeetUP Chile Arica Los Olivos</option>
+                <option value="chillan">Sesión MeetUP Chile Chillán</option>
+                <option value="osorno">Sesión MeetUP Chile Osorno</option>
+                <option value="renca">Sesión MeetUP Chile Renca</option>
+                <option value="temuco-norte">Sesión MeetUP Chile Temuco Norte</option>
+                <option value="puerto-varas">Sesión MeetUP Chile Puerto Varas</option>
+                <option value="rancagua">Sesión MeetUP Chile Rancagua</option>
+                <option value="hualpen">Sesión MeetUP Chile Hualpén</option>
+                <option value="temuco-sur">Sesión MeetUP Chile Temuco Sur</option>
+                <option value="cinco-de-abril">Sesión MeetUP Chile Cinco de Abril</option>
+                <option value="puerto-montt">Sesión MeetUP Chile Puerto Montt</option>
+                <option value="san-antonio">Sesión MeetUP Chile San Antonio</option>
+                <option value="los-angeles">Sesión MeetUP Chile Los Ángeles</option>
+                <option value="copiapo">Sesión MeetUP Chile Copiapó</option>
+                <option value="la-serena">Sesión MeetUP Chile La Serena</option>
+                <option value="vicuna-mackenna">Sesión MeetUP Chile Vicuña Mackenna</option>
+                <option value="maipu">Sesión MeetUP Chile Maipú</option>
+                <option value="las-condes">Sesión MeetUP Chile Las Condes</option>
+                <option value="penaflor">Sesión MeetUP Chile Peñaflor</option>
+                <option value="la-cisterna">Sesión MeetUP Chile La Cisterna</option>
+                <option value="san-pablo">Sesión MeetUP Chile San Pablo</option>
+                <option value="los-aviadores">Sesión MeetUP Chile Los Aviadores</option>
+                <option value="antofagasta">Sesión MeetUP Chile Antofagasta</option>
+                <option value="zapadores">Sesión MeetUP Chile Zapadores</option>
+                <option value="el-belloto">Sesión MeetUP Chile El Belloto</option>
+                <option value="san-bernardo">Sesión MeetUP Chile San Bernardo</option>
+                <option value="valdivia">Sesión MeetUP Chile Valdivia</option>
+                <option value="concepcion">Sesión MeetUP Chile Concepción</option>
+                <option value="punta-arenas-rgl">Sesión MeetUP Punta Arenas y RGL</option>
+                <option value="puente-alto-1">Sesión MeetUP Chile Puente Alto 1 (15 a 18 años)</option>
+                <option value="iquique">Sesión MeetUP Chile Iquique</option>
+                <option value="la-portada-antofagasta">Sesión MeetUP Chile La Portada Antofagasta</option>
+
+                <!-- Agrega más opciones aquí -->
+            </select>
+            <div class="session-info">
+                <div id="villa-alemana" class="session-content">
+                    <h3>Sesión Villa Alemana</h3>
+                    <p>Fecha: 24 de Agosto, 2024</p>
+                    <p>Lugar: Centro de Estaca Villa Alemana</p>
+                    <p>Matrimonio Director:</p>
+                    <img src="villa-alemana.jpg" alt="Villa Alemana">
+                    <p>Mensaje del Matrimonio Director:</p>
+                    <p>null</p>
+                    <p>Redes Sociales Oficiales</p>
+                    <a href="https://www.instagram.com/meetupvao/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div id="vina-del-mar" class="session-content">
+                    <h3>Sesión Viña Del Mar</h3>
+                    <p>Fecha: 24 de Agosto, 2024</p>
+                    <p>Lugar: Centro de Estaca Viña del Mar</p>
+                    <p>Matrimonio Director:</p>
+                    <img src="viña-del-mar.jpg" alt="Viña Del Mar">
+                    <p>Mensaje del Matrimonio Director:</p>
+                    <p>Hola somos el matrimonio Pérez Correa, esperamos conocerles y vivir una hermosa experiencia en este MeetUP!</p>
+                    <p>Redes Sociales Oficiales</p>
+                    <a href="https://www.instagram.com/meetup_viva/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div id="la-serena" class="session-content">
+                    <h3>Sesión La Serena</h3>
+                    <p>Fecha: 24 de Agosto, 2024</p>
+                    <p>Lugar: Centro de Estaca La Serena</p>
+                    <img src="la-serena.jpg" alt="La Serena">
+                    <p>Estacas/misiones/distritos invitados</p>
+                    <p>Coquimbo Chile Stake
+                       La Serena Chile Stake
+                       Ovalle Chile District
+                       Illapel Chile District</p>
+                    <p>Redes Sociales Oficiales</p>
+                    <a href="https://www.instagram.com/meetup_laserena/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div id="arauco" class="session-content">
+                    <h3>Sesión MeetUp Chile Arauco</h3>
+                    <p>Fecha: 24 de Agosto, 2024</p>
+                    <p>Lugar: Centro Estaca Arauco</p>
+                    <img src="arauco.jpg" alt="MeetUp Chile Arauco">
+                    <p>Redes Sociales Oficiales</p>
+                </div>
+                
+                <div id="talca" class="session-content">
+                    <h3>Sesión MeetUP Talca</h3>
+                    <p>Fecha: 24 de Agosto, 2024</p>
+                    <p>Lugar: Centro Estaca Talca</p>
+                    <img src="talca.jpg" alt="MeetUP Talca">
+                    <p>Redes Sociales Oficiales</p>
+                </div>
+                
+                <div id="puente-alto-2" class="session-content">
+                    <h3>Sesión MeetUP Chile Puente Alto 2 (12 a 14 años)</h3>
+                    <p>Fecha: 24 de Agosto, 2024</p>
+                    <p>Lugar: Las Nieves</p>
+                    <img src="puente-alto-2.jpg" alt="MeetUP Chile Puente Alto 2">
+                    <p>Redes Sociales Oficiales</p>
+                </div>
+                
+                <div id="arica-los-olivos" class="session-content">
+                    <h3>Sesión MeetUP Chile Arica Los Olivos</h3>
+                    <p>Fecha: 24 de Agosto, 2024</p>
+                    <p>Lugar: Centro Estaca Los Olivos (Edificio Simón Bolívar)</p>
+                    <img src="arica-los-olivos.jpg" alt="MeetUP Chile Arica Los Olivos">
+                    <p>Redes Sociales Oficiales</p>
+                </div>
+                
+                <div id="chillan" class="session-content">
+                    <h3>Sesión MeetUP Chile Chillán</h3>
+                    <p>Fecha: 24 de Agosto, 2024</p>
+                    <p>Lugar: Centro Estaca Chillán</p>
+                    <img src="chillan.jpg" alt="MeetUP Chile Chillán">
+                    <p>Redes Sociales Oficiales</p>
+                </div>
+                
+                <div id="osorno" class="session-content">
+                    <h3>Sesión MeetUP Chile Osorno</h3>
+                    <p>Fecha: 24 de Agosto, 2024</p>
+                    <p>Lugar: Centro Estaca Osorno</p>
+                    <img src="osorno.jpg" alt="MeetUP Chile Osorno">
+                    <p>Redes Sociales Oficiales</p>
+                </div>
+                
+                <div id="renca" class="session-content">
+                    <h3>Sesión MeetUP Chile Renca</h3>
+                    <p>Fecha: 24 de Agosto, 2024</p>
+                    <p>Lugar: Centro Estaca Quilicura</p>
+                    <img src="renca.jpg" alt="MeetUP Chile Renca">
+                    <p>Redes Sociales Oficiales</p>
+                </div>
+                
+                <div id="temuco-norte" class="session-content">
+                    <h3>Sesión MeetUP Chile Temuco Norte</h3>
+                    <p>Fecha: 24 de Agosto, 2024</p>
+                    <p>Lugar: Centro Estaca Ñielol</p>
+                    <img src="temuco-norte.jpg" alt="MeetUP Chile Temuco Norte">
+                    <p>Redes Sociales Oficiales</p>
+                </div>
+                
+                <div id="puerto-varas" class="session-content">
+                    <h3>Sesión MeetUP Chile Puerto Varas</h3>
+                    <p>Fecha: 24 de Agosto, 2024</p>
+                    <p>Lugar: Escuela Inés Gallardo Llanquihue Calle baquedano 1009</p>
+                    <img src="puerto-varas.jpg" alt="MeetUP Chile Puerto Varas">
+                    <p>Redes Sociales Oficiales</p>
+                </div>
+                
+                <div id="rancagua" class="session-content">
+                    <h3>Sesión MeetUP Chile Rancagua</h3>
+                    <p>Fecha: 24 de Agosto, 2024</p>
+                    <p>Lugar: Centro de Estaca Tupahue</p>
+                    <img src="rancagua.jpg" alt="MeetUP Chile Rancagua">
+                    <p>Redes Sociales Oficiales</p>
+                </div>
+                
+                <div id="hualpen" class="session-content">
+                    <h3>Sesión MeetUP Chile Hualpén</h3>
+                    <p>Fecha: 24 de Agosto, 2024</p>
+                    <p>Lugar: Centro Estaca Hualpen</p>
+                    <img src="hualpen.jpg" alt="MeetUP Chile Hualpén">
+                    <p>Redes Sociales Oficiales</p>
+                </div>
+                
+                <div id="temuco-sur" class="session-content">
+                    <h3>Sesión MeetUP Chile Temuco Sur</h3>
+                    <p>Fecha: 24 de Agosto, 2024</p>
+                    <p>Lugar: Centro Estaca Cautin</p>
+                    <img src="temuco-sur.jpg" alt="MeetUP Chile Temuco Sur">
+                    <p>Redes Sociales Oficiales</p>
+                </div>
+                
+                <div id="cinco-de-abril" class="session-content">
+                    <h3>Sesión MeetUP Chile Cinco de Abril</h3>
+                    <p>Fecha: 24 de Agosto, 2024</p>
+                    <p>Lugar: Centro Estaca Cinco de Abril</p>
+                    <img src="cinco-de-abril.jpg" alt="MeetUP Chile Cinco de Abril">
+                    <p>Redes Sociales Oficiales</p>
+                </div>
+                
+                <div id="puerto-montt" class="session-content">
+                    <h3>Sesión MeetUP Chile Puerto Montt</h3>
+                    <p>Fecha: 24 de Agosto, 2024</p>
+                    <p>Lugar: Capilla del Barrio Portal del mar (Pasaje las Lilas 2132)</p>
+                    <img src="puerto-montt.jpg" alt="MeetUP Chile Puerto Montt">
+                    <p>Redes Sociales Oficiales</p>
+                </div>
+                
+                <div id="san-antonio" class="session-content">
+                    <h3>Sesión MeetUP Chile San Antonio</h3>
+                    <p>Fecha: 24 de Agosto, 2024</p>
+                    <p>Lugar: Edificio Llolleo</p>
+                    <img src="san-antonio.jpg" alt="MeetUP Chile San Antonio">
+                    <p>Redes Sociales Oficiales</p>
+                </div>
+                
+                <div id="los-angeles" class="session-content">
+                    <h3>Sesión MeetUP Chile Los Ángeles</h3>
+                    <p>Fecha: 24 de Agosto, 2024</p>
+                    <p>Lugar: Centro Estaca Los Ángeles Norte</p>
+                    <img src="los-angeles.jpg" alt="MeetUP Chile Los Ángeles">
+                    <p>Redes Sociales Oficiales</p>
+                </div>
+                
+                <div id="copiapo" class="session-content">
+                    <h3>Sesión MeetUP Chile Copiapó</h3>
+                    <p>Fecha: 24 de Agosto, 2024</p>
+                    <p>Lugar: Centro Estaca Copiapó</p>
+                    <img src="copiapo.jpg" alt="MeetUP Chile Copiapó">
+                    <p>Redes Sociales Oficiales</p>
+                </div>
+                
+                <div id="vicuna-mackenna" class="session-content">
+                    <h3>Sesión MeetUP Chile Vicuña Mackenna</h3>
+                    <p>Fecha: 24 de Agosto, 2024</p>
+                    <p>Lugar: Por definir</p>
+                    <img src="vicuna-mackenna.jpg" alt="MeetUP Chile Vicuña Mackenna">
+                    <p>Redes Sociales Oficiales</p>
+                </div>
+                
+                <div id="maipu" class="session-content">
+                    <h3>Sesión MeetUP Chile Maipú</h3>
+                    <p>Fecha: 24 de Agosto, 2024</p>
+                    <p>Lugar: Esquina Blanca, Centro de Estaca Maipú</p>
+                    <img src="maipu.jpg" alt="MeetUP Chile Maipú">
+                    <p>Redes Sociales Oficiales</p>
+                </div>
+                
+                <div id="las-condes" class="session-content">
+                    <h3>Sesión MeetUP Chile Las Condes</h3>
+                    <p>Fecha: 24 de Agosto, 2024</p>
+                    <p>Lugar: Centro Estaca La Reina</p>
+                    <img src="las-condes.jpg" alt="MeetUP Chile Las Condes">
+                    <p>Redes Sociales Oficiales</p>
+                </div>
+                
+                <div id="penaflor" class="session-content">
+                    <h3>Sesión MeetUP Chile Peñaflor</h3>
+                    <p>Fecha: 24 de Agosto, 2024</p>
+                    <p>Lugar: Edificio Peñaflor</p>
+                    <img src="penaflor.jpg" alt="MeetUP Chile Peñaflor">
+                    <p>Redes Sociales Oficiales</p>
+                </div>
+                
+                <div id="la-cisterna" class="session-content">
+                    <h3>Sesión MeetUP Chile La Cisterna</h3>
+                    <p>Fecha: 24 de Agosto, 2024</p>
+                    <p>Lugar: Centro Estaca La Cisterna</p>
+                    <img src="la-cisterna.jpg" alt="MeetUP Chile La Cisterna">
+                    <p>Redes Sociales Oficiales</p>
+                </div>
+                
+                <div id="san-pablo" class="session-content">
+                    <h3>Sesión MeetUP Chile San Pablo</h3>
+                    <p>Fecha: 24 de Agosto, 2024</p>
+                    <p>Lugar: Centro Estaca San Pablo</p>
+                    <img src="san-pablo.jpg" alt="MeetUP Chile San Pablo">
+                    <p>Redes Sociales Oficiales</p>
+                </div>
+                
+                <div id="los-aviadores" class="session-content">
+                    <h3>Sesión MeetUP Chile Los Aviadores</h3>
+                    <p>Fecha: 24 de Agosto, 2024</p>
+                    <p>Lugar: Edificio 37 de gran Avenida</p>
+                    <img src="los-aviadores.jpg" alt="MeetUP Chile Los Aviadores">
+                    <p>Redes Sociales Oficiales</p>
+                </div>
+                
+                <div id="antofagasta" class="session-content">
+                    <h3>Sesión MeetUP Chile Antofagasta</h3>
+                    <p>Fecha: 24 de Agosto, 2024</p>
+                    <p>Lugar: Por Definir</p>
+                    <img src="antofagasta.jpg" alt="MeetUP Chile Antofagasta">
+                    <p>Redes Sociales Oficiales</p>
+                </div>
+                
+                <div id="zapadores" class="session-content">
+                    <h3>Sesión MeetUP Chile Zapadores</h3>
+                    <p>Fecha: 24 de Agosto, 2024</p>
+                    <p>Lugar: Centro Estaca Independencia</p>
+                    <img src="zapadores.jpg" alt="MeetUP Chile Zapadores">
+                    <p>Redes Sociales Oficiales</p>
+                </div>
+                
+                <div id="el-belloto" class="session-content">
+                    <h3>Sesión MeetUP Chile El Belloto</h3>
+                    <p>Fecha: 24 de Agosto, 2024</p>
+                    <p>Lugar: Centro Estaca El Belloto</p>
+                    <img src="el-belloto.jpg" alt="MeetUP Chile El Belloto">
+                    <p>Redes Sociales Oficiales</p>
+                </div>
+                
+                <div id="san-bernardo" class="session-content">
+                    <h3>Sesión MeetUP Chile San Bernardo</h3>
+                    <p>Fecha: 24 de Agosto, 2024</p>
+                    <p>Lugar: Centro Estaca San Bernardo</p>
+                    <img src="san-bernardo.jpg" alt="MeetUP Chile San Bernardo">
+                    <p>Redes Sociales Oficiales</p>
+                </div>
+                
+                <div id="valdivia" class="session-content">
+                    <h3>Sesión MeetUP Chile Valdivia</h3>
+                    <p>Fecha: 24 de Agosto, 2024</p>
+                    <p>Lugar: Centro Estaca Valdivia</p>
+                    <img src="valdivia.jpg" alt="MeetUP Chile Valdivia">
+                    <p>Redes Sociales Oficiales</p>
+                </div>
+                
+                <div id="concepcion" class="session-content">
+                    <h3>Sesión MeetUP Chile Concepción</h3>
+                    <p>Fecha: 24 de Agosto, 2024</p>
+                    <p>Lugar: Centro Estaca Chiguayante</p>
+                    <img src="concepcion.jpg" alt="MeetUP Chile Concepción">
+                    <p>Redes Sociales Oficiales</p>
+                </div>
+                
+                <div id="punta-arenas-rgl" class="session-content">
+                    <h3>Sesión MeetUP Punta Arenas y RGL</h3>
+                    <p>Fecha: 24 de Agosto, 2024</p>
+                    <p>Lugar: Capilla Barrio Ovejero</p>
+                    <img src="punta-arenas-rgl.jpg" alt="MeetUP Punta Arenas y RGL">
+                    <p>Redes Sociales Oficiales</p>
+                </div>
+                
+                <div id="puente-alto-1" class="session-content">
+                    <h3>Sesión MeetUP Chile Puente Alto 1 (15 a 18 años)</h3>
+                    <p>Fecha: 24 de Agosto, 2024</p>
+                    <p>Lugar: Centro Estaca Puente Alto (Callavientos)</p>
+                    <img src="puente-alto-1.jpg" alt="MeetUP Chile Puente Alto 1">
+                    <p>Redes Sociales Oficiales</p>
+                </div>
+                
+                <div id="iquique" class="session-content">
+                    <h3>Sesión MeetUP Chile Iquique</h3>
+                    <p>Fecha: 24 de Agosto, 2024</p>
+                    <p>Lugar: Centro Estaca iquique (Edificio Zegers)</p>
+                    <img src="iquique.jpg" alt="MeetUP Chile Iquique">
+                    <p>Redes Sociales Oficiales</p>
+                </div>
+                
+                <div id="la-portada-antofagasta" class="session-content">
+                    <h3>Sesión MeetUP Chile La Portada Antofagasta</h3>
+                    <p>Fecha: 24 de Agosto, 2024</p>
+                    <p>Lugar: Centro Estaca La Portada</p>
+                    <img src="la-portada-antofagasta.jpg" alt="MeetUP Chile La Portada Antofagasta">
+                    <p>Redes Sociales Oficiales</p>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="faq" class="card">
+            <h2>Preguntas Frecuentes</h2>
+            <div class="faq-item">
+                <h3>¿Qué debo llevar al evento?</h3>
+                <p>R: Ropa cómoda, permiso impreso [Sí corresponde], y tu entusiasmo!</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿El evento tiene algún costo?</h3>
+                <p>R: No, MeetUp no tiene ningun costo asociado. Puedes inscribirte sin problemas con tu cuenta LDS.</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿Necesito permiso de mis padres/tutor/obispo?</h3>
+                <p>Claro que sí! Al inscribirte de manera online o fisica [Imprimiendo], debes contar con la autorizacion de algún tutor legal o tu obispo.</p>
+                <p>R: Si haces la inscripcion online, tu obispo debe aprobar tu inscripcion.</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿Donde va a ser?</h3>
+                <p>R: Eso depende de donde seas o vivas. En este caso te invito a revisar esa informacion arriba en el selector de sesión para ver la informacion correspondiente.</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿Cuanto dura el evento?</h3>
+                <p>R: 10 horas. Desde las 8:00am a las 18:00pm</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿Me puedo ir solo del evento?</h3>
+                <p>R: Por lo visto, no se puede. Tendría que venir tu obispo o tutor legal para poder retirarte del evento. Esto para evitar incovenientes o situaciones no deseadas.</p>
+            </div>
+        </section>
+
+        <section id="contacto" class="card">
+            <center><h2>Contacto</h2></center>
+            <form id="contacto-form">
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Esta pagina NO es oficial. Tampoco esta afiliada a la Iglesia de Jesuscristo de los Santos de Los Ultimos Días.</p>
+        <p>Este servicio es mantenido y escrito por un joven miembro independiente. La informacion podriá no ser precisa.</p>
+        <div class="social-media">
+            <a href="https://github.com/molret/meetupweb" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.instagram.com/meetupvao/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:contacto@meetup.lat" aria-label="Correo"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+        <p>© 2024 MeetUp.lat. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
